@@ -1,0 +1,109 @@
+
+
+<h1><center>Doctor Registration</center></h1>
+<br />
+<form name=frm method=post action="">
+
+
+
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <table width=300 border=2 align=center>
+
+    <tr>
+    <th align=left> Student</th>
+    <td><input type=text name=custname required></td>
+    </tr>
+    <tr>
+    <th align=left>Address</th>
+    <td><input type=text name=custaddress required></td>
+    </tr>
+    <tr>
+    <th align=left>Phone Number</th>
+    <td><input type=text name=custnum maxlength="10" required></td>
+    </tr>
+    <tr>
+    <th align=left>Landmark</th>
+    <td><input type=text name=custloc></td>
+    </tr>
+    <tr>
+    <th align=left>Pincode</th>
+    <td><input type=text id=pc name=pincode></td>
+    </tr>
+    <tr>
+    <th align=left>Password</th>
+    <td><input type=password id=pwd name=password required></td>
+    <script>
+    function myfun()
+    {
+       var x=document.getElementById("pwd");
+       var l=x.value.length;
+       
+       if(l!=8)
+       {
+       alert("Choose 8 charcters as a password without any special characters!");
+       return false;
+       }
+       
+        var x=document.getElementById("phno");
+       var l=x.value.length;
+       
+       if(l!=10)
+       {
+       alert("Please enter correct phone number!");
+       return false;
+       }
+       
+        return true; 
+    
+    
+    }
+    </script>
+    </tr>
+    
+    <tr>
+    
+    <td colspan=2 ><div class="btn-box">
+         <center> <br><button width="10" type="submit" onClick="return myfun();">Submit</button></center>
+                  </div><br />
+    </td>
+    </tr>
+    </table>
+    
+    
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </form>
+    </html>
